@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "karney.h"
 #include "normal.h"
+#include "sample_karney.h"
 
 #define N 5000000
 
@@ -22,7 +22,7 @@ int main() {
 
   /* sample distribution */
   for (int i = 0; i < N; ++i) {
-    int bin = floor((sample_karney(MU, SIGMA) - BIN_MIN + 0.5) / BW);
+    int bin = floor((sample(MU, SIGMA) - BIN_MIN + 0.5) / BW);
     ++freq[bin];
   }
 

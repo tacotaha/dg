@@ -1,5 +1,8 @@
-#include <math.h>
+#ifndef SAMPLE_KARNEY_H
+#define SAMPLE_KARNEY_H
+
 #include <stdint.h>
+#include <math.h>
 
 #include "entropy.h"
 
@@ -27,7 +30,7 @@ static inline int32_t S() {
   }
 }
 
-static inline int32_t sample_karney(double mu, double sigma) {
+static inline int32_t sample(double mu, double sigma) {
   for (;;) {
     int k = S();
 
@@ -45,3 +48,5 @@ static inline int32_t sample_karney(double mu, double sigma) {
     if (x == 0 || uniformr() <= xn0) return s * (i0 + j);
   }
 }
+
+#endif /* SAMPLE_KARNEY_H */
