@@ -31,7 +31,7 @@ static inline void inv_init(double mu, double sigma) {
 
 /* free the inversion table */
 static inline void inv_free() {
-  free(__invtab);
+  free(__invtab); __invtab = NULL;
   __invtab_m = 0;
 }
 

@@ -11,7 +11,7 @@ static inline double normcdf(double x, double mu, double sigma) {
 /* approximates the normal PDF */
 static inline double norm(double x, double mu, double sigma) {
   mu = (x - mu) / sigma;
-  return exp(-mu * mu * 0.5) / (sigma * sqrt(2 * M_PI));
+  return exp(-mu * mu * 0.5) / (sigma * sqrt(2.0 * M_PI));
 }
 
 /* discrete normal probability */

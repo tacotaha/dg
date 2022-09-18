@@ -23,7 +23,7 @@ static inline uint32_t uniform32() {
 static inline double uniformr() {
   uint64_t r;
   rng(&r, sizeof(uint64_t));
-  return ldexpf(r & ((1 << DBL_MANT_DIG) - 1), -DBL_MANT_DIG);
+  return ldexpf(r & ((1UL << DBL_MANT_DIG) - 1), -DBL_MANT_DIG);
 }
 
 #else
