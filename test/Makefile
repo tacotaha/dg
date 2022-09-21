@@ -5,11 +5,11 @@ EXEC=karney inv
 
 all: $(EXEC)
 
-karney: karney.c chisq.c
-	$(CC) $(CFLAGS) karney.c chisq.c -o karney $(LFLAGS)
+karney: karney.c chisq.c bench.c
+	$(CC) $(CFLAGS) karney.c chisq.c bench.c -o karney $(LFLAGS)
 
-inv: inv.c chisq.c
-	$(CC) $(CFLAGS) inv.c chisq.c -o inv $(LFLAGS)
+inv: inv.c chisq.c bench.c
+	$(CC) $(CFLAGS) inv.c chisq.c bench.c -o inv $(LFLAGS)
 
 clean:
 	rm -f $(EXEC)
